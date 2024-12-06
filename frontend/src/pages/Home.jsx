@@ -1,13 +1,10 @@
-import React from 'react'
-const HomePage=()=>{
-    return(
-        <div>
-            This is the HomePage
-            This is the HomePage
-            This is the HomePage
-            This is the HomePage
-
-        </div>
-    )
-}
+import React from "react";
+import HomeMain from "../components/home";
+const HomePage = () => {
+  return (
+    <div>
+      <HomeMain />
+    </div>
+  );
+};
 export default HomePage;
