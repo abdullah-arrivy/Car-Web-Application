@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
+import { routeText } from "../../routes/RouteText";
 
 const Card = ({ brands }) => {
   console.log("brands", brands);
@@ -10,13 +11,14 @@ const Card = ({ brands }) => {
         {brands.map((brand) => (
           <div className="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4" key={brand.id}>
             <Link
-              to={`/brand/${brand.id}`}
+              to={routeText.CAR_DETAIL.replace(":id", brand.id)}
               className="block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden"
             >
               <img
                 src={brand.logo}
                 alt={brand.name}
                 className="w-full h-40 object-contain"
+                loading="lazy"
               />
               <div className="p-4">
                 <h3 className="inline-block px-2 py-1 leading-none bg-orange-200 text-orange-800 rounded-full font-semibold uppercase tracking-wide text-xs">
